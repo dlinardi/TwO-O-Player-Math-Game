@@ -1,8 +1,13 @@
 class Player
-  attr_accessor :lives, :curr_player
+  attr_reader :name
+  attr_accessor :lives
 
-  def initialize
+  def initialize(name)
+    @name = name
     @lives = 3
-    @curr_player = false
+  end
+
+  def stats
+    "#{name}: #{lives}/3"
   end
 end
